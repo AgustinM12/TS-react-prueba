@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "./components/Button"
-import { Card } from "./components/Card"
+import { Count } from "./components/Count";
 
 function App() {
 
@@ -16,16 +16,19 @@ function App() {
 
   return (
     <>
-      <div className="bg-slate-950 w-screen h-screen flex items-center justify-center">
+      <div className="bg-slate-950 w-screen h-screen flex items-center justify-center gap-10">
 
-        <input type="number" value={num1} onChange={(e)=>setNum1(Number(e.target.value))}/>
-        <input type="number" value={num2} onChange={(e)=>setNum2(Number(e.target.value))}/>
+        <div className="flex flex-col justify-center items-center gap-3 bg-blue-400">
 
-        <Button text="Sumar" color="red" onClick={()=>sumar(num1, num2)} />
+          <input type="number" value={num1} onChange={(e) => setNum1(Number(e.target.value))} className="w-fit" />
 
-        <Card text1="hola" text2="chau">
-          <p>LALALALA</p>
-        </Card>
+          <input type="number" value={num2} onChange={(e) => setNum2(Number(e.target.value))} className="w-fit" />
+
+        </div>
+
+        <Button text="Sumar" color="red" onClick={() => sumar(num1, num2)} />
+
+        <Count />
 
       </div>
     </>

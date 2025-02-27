@@ -1,5 +1,7 @@
 
 // ! el ? significa que es opcional
+// ! interfaces siempres on objetos, mientras que los types no necesariamente.
+ 
 type ButtomProps = {
     text:string;
     color?: "red" | "blue"
