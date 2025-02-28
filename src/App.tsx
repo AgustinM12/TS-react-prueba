@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "./components/Button"
 import { Count } from "./components/Count";
+import { useFetch } from "./hooks/useFetch";
 
 function App() {
 
@@ -13,6 +14,9 @@ function App() {
   // ! TIPADO DE USE-STATE
   const [num1, setNum1] = useState<number>(0)
   const [num2, setNum2] = useState<number>(0)
+
+
+  const data =  useFetch()
 
   return (
     <>
